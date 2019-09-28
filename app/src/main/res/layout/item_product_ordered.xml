@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180pt"
+    android:background="@drawable/table_ripple_bg"
+    android:paddingLeft="30pt"
+    android:paddingRight="20pt">
+
+    <LinearLayout
+        android:id="@+id/product_info_ll"
+        android:layout_width="530pt"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/discount_iv"
+            android:layout_width="72pt"
+            android:layout_height="40pt"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/ic_product_free" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/product_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:maxLines="2"
+                android:paddingLeft="5pt"
+                android:textColor="@color/gray_4"
+                android:textSize="40pt"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/product_memo_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:textColor="@color/gray_2"
+                android:textSize="34pt" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/product_current_price_tv"
+        android:layout_width="230pt"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/product_info_ll"
+        android:gravity="left|center"
+        android:text="￥10000.00"
+        android:textColor="@color/red_interest"
+        android:textSize="42pt"
+        android:textStyle="bold" />
+
+    <com.tdlbs.waiterordering.mvp.widget.BigValueAddSubView
+        android:id="@+id/nb_view"
+        android:layout_width="270pt"
+        android:layout_height="80pt"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white_slight" />
+</RelativeLayout>

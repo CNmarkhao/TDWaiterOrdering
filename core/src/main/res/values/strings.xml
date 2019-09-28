@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name" translatable="false">AndroidCore</string>
+    <string name="common_loading_message" translatable="false">Loading...</string>
+    <string name="common_empty_msg" translatable="false">Oops, failed to resolve data\nPlease hit the screen and try again~</string>
+    <string name="common_error_msg" translatable="false">Oops, something wrong!\nPlease hit the screen and try again~</string>
+    <string name="common_no_network_msg" translatable="false">No network connected!\nPlease hit the screen and try again after connecting~</string>
+    <string name="dialog_loading_prompt" translatable="false">loading...</string>
+    <string name="toolbar_back" translatable="false">Back</string>
+    <string name="dialog_btn_sure" translatable="false">确定</string>
+    <string name="dialog_btn_cancel" translatable="false">取消</string>
+</resources>

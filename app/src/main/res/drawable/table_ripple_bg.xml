@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/gray_0">
+    <item>
+        <selector>
+            <item android:state_pressed="true">
+                <shape>
+                    <corners android:radius="2dp" />
+                    <solid android:color="@color/gray_interest" />
+                </shape>
+            </item>
+            <item
+                android:drawable="@color/white"
+                android:state_pressed="false"/>
+        </selector>
+    </item>
+</ripple>

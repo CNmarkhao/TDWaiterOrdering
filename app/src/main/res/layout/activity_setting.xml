@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="241pt"
+        android:background="@mipmap/toolbar_bg"
+        android:elevation="6pt">
+
+        <ImageView
+            android:id="@+id/left_menu_btn"
+            android:layout_width="173pt"
+            android:layout_height="173pt"
+            android:layout_marginTop="68pt"
+            android:src="@mipmap/ic_back" />
+
+        <TextView
+            style="@style/wrap_wrap"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="215pt"
+            android:layout_marginBottom="58pt"
+            android:text="设置"
+            android:textColor="@color/white"
+            android:textSize="50pt" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="150pt"
+        android:layout_marginTop="40pt"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="30pt"
+            android:text="显示菜品图片"
+            android:textColor="@color/gray_4"
+            android:textSize="40pt"
+            android:textStyle="bold" />
+
+        <com.tdlbs.waiterordering.mvp.widget.SwitchView
+            android:id="@+id/show_pic_switch"
+            android:layout_width="144pt"
+            android:layout_height="90pt"
+            android:layout_gravity="right|center"
+            android:layout_marginRight="30pt"
+            app:color_off="#bfbfbf"
+            app:color_on="@color/colorPrimary" />
+    </FrameLayout>
+
+</LinearLayout>

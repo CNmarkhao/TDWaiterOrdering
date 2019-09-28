@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bg_fl"
+    style="@style/match_match">
+
+
+    <com.tdlbs.waiterordering.mvp.widget.CubeLoadingView
+        android:layout_width="600pt"
+        android:layout_height="800pt"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="50pt"
+        android:layout_marginTop="200pt" />
+
+    <com.daimajia.numberprogressbar.NumberProgressBar
+        android:id="@+id/update_pb"
+        style="@style/match_wrap"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="50pt"
+        android:layout_marginRight="50pt"
+        android:layout_marginBottom="250pt"
+        custom:progress_current="0"
+        custom:progress_max="100"
+        custom:progress_reached_bar_height="4pt"
+        custom:progress_reached_color="@color/colorAccent"
+        custom:progress_text_color="@color/colorAccent"
+        custom:progress_text_offset="4pt"
+        custom:progress_text_size="36pt"
+        custom:progress_text_visibility="visible"
+        custom:progress_unreached_bar_height="3pt"
+        custom:progress_unreached_color="#CCCCCC" />
+
+    <TextView
+        android:id="@+id/update_tv"
+        style="@style/match_wrap"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="50pt"
+        android:layout_marginRight="50pt"
+        android:layout_marginBottom="160pt"
+        android:text="同步数据：更新商户基本信息..."
+        android:textColor="@color/colorAccent"
+        android:textSize="40pt" />
+</FrameLayout>

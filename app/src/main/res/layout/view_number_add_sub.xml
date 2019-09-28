@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="270pt"
+    android:layout_height="80pt"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_sub"
+        android:layout_width="80pt"
+        android:layout_height="80pt"
+        android:src="@mipmap/ic_number_sub" />
+
+
+    <EditText
+        android:focusable="false"
+        android:id="@+id/et_count"
+        android:layout_width="wrap_content"
+        android:layout_height="60pt"
+        android:background="@null"
+        android:gravity="center"
+        android:inputType="number"
+        android:minWidth="100pt"
+        android:padding="10pt"
+        android:singleLine="true"
+        android:textColor="@color/gray_4"
+        android:textSize="40pt"
+        tools:text="9999" />
+
+    <ImageView
+        android:id="@+id/iv_add"
+        android:layout_width="80pt"
+        android:layout_height="80pt"
+        android:src="@mipmap/ic_number_add" />
+</LinearLayout>

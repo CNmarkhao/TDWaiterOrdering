@@ -1,0 +1,133 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    defaultConfig {
+        applicationId "com.tdlbs.ordering.waiter"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        flavorDimensions "versionCode"
+
+        multiDexEnabled true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+//            buildConfigField "String", "BASE_URL", '"http://aaa:9092/"'
+            buildConfigField "String", "BASE_URL", '"http://www.baidu.com:8083/"'
+        }
+        release {
+//            minifyEnabled true
+//            shrinkResources true
+//            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            android.applicationVariants.all { variant ->
+                variant.outputs.all { output ->
+                    def fileName
+                    def date = new Date()
+                    def formattedDate = date.format('yyyyMMddhhmmss')
+                    if (variant.buildType.name.equals('release')) {
+                        fileName = "${variant.mergedFlavor.applicationId}_${variant.mergedFlavor.versionName}_release_${formattedDate}.apk"
+                    } else if (variant.buildType.name.equals('debug')) {
+                        fileName = "${variant.mergedFlavor.applicationId}_${variant.mergedFlavor.versionName}_debug_${formattedDate}.apk"
+                    }
+                    outputFileName = fileName
+                }
+            }
+        }
+    }
+
+    productFlavors {
+        base {
+            applicationId 'om.tdlbs.ordering.waiter.base'
+            buildConfigField "String", "BASE_URL", '"http://www.baidu.com:8083/"'
+            buildConfigField "Integer", "STANDBY_TIME", '120'
+        }
+        hyc {
+            applicationId 'om.tdlbs.ordering.waiter.hyc'
+            buildConfigField "String", "BASE_URL", '"http://172.16.0.101:80/"'
+            buildConfigField "Integer", "STANDBY_TIME", '120'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+    dexOptions {
+        //support big project mode
+        jumboMode true
+        //max heap size
+        javaMaxHeapSize "4g"
+        //pre build
+        preDexLibraries = true
+        //thread localCount
+        threadCount = 8
+    }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
+    implementation project(path: ':core')
+    implementation project(path: ':printer')
+
+    implementation "androidx.multidex:multidex:2.0.1"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    //butterknife
+    api 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    //dagger2
+    implementation 'com.google.dagger:dagger:2.24'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.24'
+    //lombok
+    implementation 'org.projectlombok:lombok:1.18.8'
+    //greendao
+    implementation 'de.greenrobot:greendao:2.1.0'
+    //markdown
+    implementation 'us.feras.mdv:markdownview:1.1.0'
+    //banner
+    implementation 'com.youth.banner:banner:1.4.10'
+    //smarttablayout
+    implementation 'com.ogaclejapan.smarttablayout:library:2.0.0@aar'
+    //flycotablayout
+    implementation "com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar"
+    //adapter
+    implementation "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.44"
+
+    implementation 'com.blankj:swipe-panel:1.1'
+
+    //smartrefreshlayout
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-18'
+
+    //AndroidUtilCode
+    implementation 'com.blankj:utilcode:1.24.2'
+
+    implementation 'com.daimajia.numberprogressbar:library:1.4@aar'
+
+    implementation 'com.hjq:xxpermissions:6.0'
+
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.47-androidx'
+
+    //fragmentation
+    implementation "me.yokeyword:fragmentation:1.3.1"
+    //leakcanary
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.3'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+
+}

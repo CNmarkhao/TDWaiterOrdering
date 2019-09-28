@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tdlbs.core.ui.toastbar.Toast xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/message_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_color"
+    android:paddingTop="60pt"
+    android:paddingBottom="20pt"
+    android:paddingLeft="30pt"
+    android:paddingRight="30pt"
+    android:elevation="20pt"
+    android:orientation="vertical">
+
+    <TextView
+        android:textSize="44pt"
+        android:id="@+id/message_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:minHeight="90pt"
+        android:padding="10pt"
+        android:textColor="@android:color/white" />
+</com.tdlbs.core.ui.toastbar.Toast>

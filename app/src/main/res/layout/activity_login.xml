@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@mipmap/app_bg"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="100pt"
+        android:paddingRight="100pt">
+
+        <TextView
+            style="@style/wrap_wrap"
+            android:layout_marginTop="280pt"
+            android:text="服务员点餐登录"
+            android:textColor="@color/white"
+            android:textSize="92pt" />
+
+        <EditText
+            android:inputType="number"
+            android:id="@+id/et_shop_id"
+            android:layout_width="match_parent"
+            android:layout_height="160pt"
+            android:layout_marginTop="200pt"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:hint="商家账号"
+            android:imeOptions="actionNext"
+            android:maxLines="1"
+            android:nextFocusForward="@+id/et_staff_id"
+            android:paddingLeft="40pt"
+            android:paddingRight="40pt"
+            android:singleLine="true"
+            android:textColor="@color/gray_4"
+            android:textColorHint="#990e407f"
+            android:textSize="48pt" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/white_slight" />
+
+        <EditText
+            android:inputType="number"
+            android:id="@+id/et_staff_id"
+            android:layout_width="match_parent"
+            android:layout_height="160pt"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:hint="服务员账号"
+            android:imeOptions="actionNext"
+            android:maxLines="1"
+            android:nextFocusForward="@+id/et_staff_password"
+            android:paddingLeft="40pt"
+            android:paddingRight="40pt"
+            android:singleLine="true"
+            android:textColor="@color/gray_4"
+            android:textColorHint="#990e407f"
+            android:textSize="48pt" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/white_slight" />
+
+        <EditText
+            android:id="@+id/et_staff_password"
+            android:layout_width="match_parent"
+            android:layout_height="160pt"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:hint="密码"
+            android:imeOptions="actionDone"
+            android:inputType="numberPassword"
+            android:maxLines="1"
+            android:nextFocusForward="@+id/btn_login"
+            android:paddingLeft="40pt"
+            android:paddingRight="40pt"
+            android:singleLine="true"
+            android:textColor="@color/gray_4"
+            android:textColorHint="#990e407f"
+            android:textSize="48pt" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="140pt"
+            android:layout_marginTop="160pt"
+            android:background="@drawable/btn_common_blue_bg"
+            android:gravity="center"
+            android:text="登  录"
+            android:textColor="#fff"
+            android:textSize="50pt" />
+
+    </LinearLayout>
+</FrameLayout>

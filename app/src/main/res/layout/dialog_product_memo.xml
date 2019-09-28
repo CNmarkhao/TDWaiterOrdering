@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="400pt"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="900pt"
+        android:layout_height="1130pt"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/transparent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dialog_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="160px"
+            android:background="@mipmap/dialog_bg"
+            android:gravity="center"
+            android:lines="1"
+            android:paddingLeft="40pt"
+            android:paddingRight="40pt"
+            android:text="备注"
+            android:textColor="@color/white"
+            android:textSize="50pt" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="690pt"
+            android:layout_marginTop="160pt"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/ll_product_demo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </androidx.core.widget.NestedScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="850pt"
+            android:background="@color/base_bg"
+            android:lines="1"
+            android:padding="30pt"
+            android:text="已选规格:"
+            android:textColor="@color/gray_2"
+            android:textSize="30pt" />
+        <TextView
+            android:layout_marginLeft="160pt"
+            android:id="@+id/product_memo_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="850pt"
+            android:background="@color/base_bg"
+            android:lines="1"
+            android:paddingTop="30pt"
+            android:paddingBottom="30pt"
+            android:paddingLeft="10pt"
+            android:textColor="@color/gray_4"
+            android:textSize="30pt" />
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="390pt"
+            android:layout_height="120pt"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="30pt"
+            android:layout_marginBottom="30pt"
+            android:background="@drawable/btn_cancel"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/gray_4"
+            android:textSize="46pt" />
+
+        <Button
+            android:id="@+id/confirm_btn"
+            android:layout_width="390pt"
+            android:layout_height="120pt"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="30pt"
+            android:layout_marginBottom="30pt"
+            android:background="@drawable/btn_confirm"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="46pt" />
+
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="400pt"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="900pt"
+        android:layout_height="540pt"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/transparent">
+
+        <TextView
+            android:id="@+id/dialog_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="150pt"
+            android:background="@mipmap/dialog_bg"
+            android:gravity="center"
+            android:text="退出登录"
+            android:textColor="@color/white"
+            android:textSize="50pt" />
+
+        <TextView
+            android:id="@+id/dialog_msg_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="210pt"
+            android:gravity="center"
+            android:lines="2"
+            android:paddingLeft="30pt"
+            android:paddingRight="30pt"
+            android:text="你确定退出登录或切换账号？"
+            android:textColor="@color/gray_4"
+            android:textSize="45pt" />
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="390pt"
+            android:layout_height="120pt"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30pt"
+            android:layout_marginBottom="30pt"
+            android:background="@drawable/btn_cancel"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/gray_4"
+            android:textSize="46pt" />
+
+        <Button
+            android:id="@+id/confirm_btn"
+            android:layout_width="390pt"
+            android:layout_height="120pt"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="30pt"
+            android:layout_marginBottom="30pt"
+            android:background="@drawable/btn_confirm"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="46pt" />
+    </RelativeLayout>
+</FrameLayout>

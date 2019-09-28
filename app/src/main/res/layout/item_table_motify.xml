@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120pt">
+
+    <TextView
+        android:id="@+id/table_name_tv"
+        android:layout_width="760pt"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="30pt"
+        android:gravity="center|left"
+        android:lines="1"
+        android:textColor="@color/gray_4"
+        android:textSize="40pt" />
+
+    <ImageView
+        android:id="@+id/table_choosed_iv"
+        android:layout_width="34pt"
+        android:layout_height="34pt"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginRight="30pt"
+        android:src="@mipmap/ic_choosed" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_gravity="bottom"
+        android:background="@color/white_slight" />
+</FrameLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="400pt"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="900pt"
+        android:layout_height="540pt"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/transparent">
+
+        <TextView
+            android:id="@+id/dialog_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="150pt"
+            android:background="@mipmap/dialog_bg"
+            android:gravity="center"
+            android:text="开桌（桌台：）"
+            android:textColor="@color/white"
+            android:textSize="50pt" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="320pt"
+            android:background="@color/white_slight" />
+
+        <TextView
+            android:id="@+id/people_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="230pt"
+            android:lines="1"
+            android:layout_marginLeft="30pt"
+            android:text="就餐人数"
+            android:textColor="@color/gray_4"
+            android:textSize="40pt" />
+
+        <EditText
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:id="@+id/people_et"
+            android:background="@null"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:inputType="number"
+            android:maxLength="2"
+            android:layout_marginRight="30pt"
+            android:textSize="40pt"
+            android:textColor="@color/gray_4"
+            android:layout_width="300pt"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/people_tv"
+            android:hint="输入就餐人数" />
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="390pt"
+            android:layout_height="120pt"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30pt"
+            android:layout_marginBottom="30pt"
+            android:background="@drawable/btn_cancel"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/gray_4"
+            android:textSize="46pt" />
+
+        <Button
+            android:id="@+id/confirm_btn"
+            android:layout_width="390pt"
+            android:layout_height="120pt"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="30pt"
+            android:layout_marginBottom="30pt"
+            android:background="@drawable/btn_confirm"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="46pt" />
+    </RelativeLayout>
+</FrameLayout>

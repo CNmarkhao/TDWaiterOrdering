@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="400pt"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="900pt"
+        android:layout_height="860pt"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/transparent"
+        android:orientation="vertical">
+
+        <TextView
+            android:lines="1"
+            android:paddingLeft="40pt"
+            android:paddingRight="40pt"
+            android:id="@+id/dialog_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="160pt"
+            android:background="@mipmap/dialog_bg"
+            android:gravity="center"
+            android:text="操作"
+            android:textColor="@color/white"
+            android:textSize="50pt" />
+
+        <androidx.core.widget.NestedScrollView style="@style/match_match">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/opt_discount_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="140pt"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="折扣"
+                    android:textColor="@color/gray_4"
+                    android:textSize="44pt"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:id="@+id/discount_fl"
+                    android:layout_width="match_parent"
+                    android:layout_height="140pt"
+                    android:paddingLeft="30pt"
+                    android:paddingRight="30pt"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="折扣率"
+                        android:textColor="@color/gray_3"
+                        android:textSize="40pt" />
+
+                    <EditText
+                        android:focusableInTouchMode="true"
+                        android:focusable="true"
+                        android:inputType="number"
+                        android:id="@+id/discount_et"
+                        android:layout_width="210pt"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="220pt"
+                        android:background="@null"
+                        android:gravity="center|right"
+                        android:hint="输入折扣率"
+                        android:maxLength="3"
+                        android:textColor="@color/gray_4"
+                        android:textSize="40pt" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="440pt"
+                        android:text="%"
+                        android:textColor="@color/gray_4"
+                        android:textSize="40pt" />
+
+                    <Button
+                        android:id="@+id/discount_confirm_btn"
+                        android:layout_width="200pt"
+                        android:layout_height="100pt"
+                        android:layout_gravity="center|right"
+                        android:background="@drawable/btn_confirm"
+                        android:gravity="center"
+                        android:text="确定"
+                        android:textColor="@color/white"
+                        android:textSize="40pt" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_gravity="top"
+                        android:background="@color/white_slight" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_gravity="bottom"
+                        android:background="@color/white_slight" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/opt_free_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="140pt"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="赠菜"
+                    android:textColor="@color/gray_4"
+                    android:textSize="44pt"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/opt_urge_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="140pt"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="催菜"
+                    android:textColor="@color/gray_4"
+                    android:textSize="44pt"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/opt_wait_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="140pt"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="暂不上菜"
+                    android:textColor="@color/gray_4"
+                    android:textSize="44pt"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/opt_push_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="140pt"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="恢复上菜"
+                    android:textColor="@color/gray_4"
+                    android:textSize="44pt"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</FrameLayout>

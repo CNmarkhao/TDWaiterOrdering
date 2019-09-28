@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content_fl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="241pt"
+        android:background="@mipmap/toolbar_bg">
+
+        <ImageView
+            android:id="@+id/left_menu_btn"
+            android:layout_width="173pt"
+            android:layout_height="173pt"
+            android:layout_marginTop="68pt"
+            android:src="@mipmap/ic_back" />
+
+        <TextView
+            android:id="@+id/page_title_tv"
+            android:layout_width="660pt"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="215pt"
+            android:layout_marginBottom="58pt"
+            android:lines="1"
+            android:text="操作（4人）点菜"
+            android:textColor="@color/white"
+            android:textSize="50pt" />
+
+        <ImageView
+            android:id="@+id/right_menu_btn"
+            android:layout_width="162pt"
+            android:layout_height="178pt"
+            android:layout_gravity="bottom|right"
+            android:padding="55pt"
+            android:src="@mipmap/ic_menu_search" />
+
+        <com.tdlbs.waiterordering.mvp.widget.searchview.RevealSearchView
+            android:id="@+id/product_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom" />
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/product_type_rv"
+        android:layout_width="240pt"
+        android:layout_height="match_parent"
+        android:layout_marginTop="241pt"
+        android:background="@color/base_bg"
+        android:paddingBottom="200pt" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/product_detail_rv"
+        android:layout_width="840pt"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:layout_marginTop="241pt"
+        android:background="@color/white"
+        android:paddingBottom="200pt" />
+
+    <LinearLayout
+        android:id="@+id/ordered_product_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000"
+        android:clickable="true"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="120pt"
+            android:background="@color/white_slight"
+            android:clickable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30pt"
+                android:gravity="center_vertical"
+                android:text="已选菜品"
+                android:textColor="@color/gray_4"
+                android:textSize="40pt" />
+
+            <TextView
+                android:id="@+id/ordered_empty_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="120pt"
+                android:layout_gravity="right"
+                android:drawableLeft="@mipmap/ic_delete"
+                android:drawablePadding="15pt"
+                android:gravity="center_vertical"
+                android:paddingLeft="30pt"
+                android:paddingRight="30pt"
+                android:text="清空"
+                android:textColor="@color/gray_2"
+                android:textSize="36pt" />
+        </FrameLayout>
+
+        <com.tdlbs.waiterordering.mvp.widget.MaxHeightRecyclerView
+            android:id="@+id/ordered_product_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="166pt"
+            android:background="@color/white"
+            android:clickable="true"
+            android:paddingBottom="50pt"
+            app:maxHeight="1100pt" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/order_price_tv"
+        android:layout_width="780pt"
+        android:layout_height="166pt"
+        android:layout_gravity="bottom"
+        android:background="@color/gray_5"
+        android:gravity="center_vertical"
+        android:paddingLeft="280pt"
+        android:text="未选购商品"
+        android:textColor="@color/gray_2"
+        android:textSize="50pt" />
+
+    <TextView
+        android:id="@+id/order_confirm_btn"
+        android:layout_width="300pt"
+        android:layout_height="166pt"
+        android:layout_gravity="bottom|right"
+        android:background="@color/gray_6"
+        android:gravity="center"
+        android:text="下单"
+        android:textColor="@color/gray_2"
+        android:textSize="46pt"
+        android:textStyle="bold" />
+
+    <com.tdlbs.waiterordering.mvp.widget.BadgeView
+        android:id="@+id/order_bag_num_bv"
+        android:layout_width="193pt"
+        android:layout_height="191pt"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="30pt"
+        android:layout_marginBottom="15pt"
+        android:paddingTop="8pt"
+        app:badgeAnchorPosition="AnchorRightTop"
+        app:badgeBgColor="@color/red"
+        app:badgeBorderColor="@color/white"
+        app:badgeBorderWidth="4pt"
+        app:badgeMarginHorizon="10pt"
+        app:badgeTextColor="@color/white"
+        app:badgeTextSize="30pt">
+
+        <ImageView
+            android:id="@+id/order_bag_btn"
+            android:layout_width="193pt"
+            android:layout_height="191pt"
+            android:src="@mipmap/ic_bag_empty" />
+    </com.tdlbs.waiterordering.mvp.widget.BadgeView>
+</FrameLayout>
+

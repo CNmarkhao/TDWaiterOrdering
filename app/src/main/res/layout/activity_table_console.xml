@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/content_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/base_bg"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="241pt"
+            android:background="@mipmap/toolbar_bg"
+            android:elevation="6pt">
+
+            <ImageView
+                android:id="@+id/left_menu_btn"
+                android:layout_width="173pt"
+                android:layout_height="173pt"
+                android:layout_marginTop="68pt"
+                android:src="@mipmap/ic_back" />
+
+            <TextView
+                style="@style/wrap_wrap"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="215pt"
+                android:layout_marginBottom="58pt"
+                android:text="餐桌管理台"
+                android:textColor="@color/white"
+                android:textSize="50pt" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="210pt"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/table_no_tv"
+                android:layout_width="270pt"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40pt"
+                android:gravity="center"
+                android:textColor="@color/gray_4"
+                android:textSize="50pt"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/table_no_title_tv"
+                android:layout_width="270pt"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="40pt"
+                android:gravity="center"
+                android:text="桌号"
+                android:textColor="@color/gray_0"
+                android:textSize="30pt" />
+
+            <TextView
+                android:id="@+id/people_num_tv"
+                android:layout_width="270pt"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/table_no_tv"
+                android:layout_marginTop="40pt"
+                android:layout_toRightOf="@+id/table_no_tv"
+                android:gravity="center"
+                android:textColor="@color/gray_4"
+                android:textSize="50pt"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/people_num_title_tv"
+                android:layout_width="270pt"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/table_no_title_tv"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="40pt"
+                android:layout_toRightOf="@+id/table_no_title_tv"
+                android:gravity="center"
+                android:text="人数"
+                android:textColor="@color/gray_0"
+                android:textSize="30pt" />
+
+            <TextView
+                android:id="@+id/bill_amount_tv"
+                android:layout_width="270pt"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/table_no_tv"
+                android:layout_marginTop="40pt"
+                android:layout_toRightOf="@+id/people_num_tv"
+                android:gravity="center"
+                android:textColor="@color/red_interest"
+                android:textSize="50pt"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bill_amount_title_tv"
+                android:layout_width="270pt"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/table_no_title_tv"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="40pt"
+                android:layout_toRightOf="@+id/people_num_title_tv"
+                android:gravity="center"
+                android:text="账单金额"
+                android:textColor="@color/gray_0"
+                android:textSize="30pt" />
+
+            <TextView
+                android:id="@+id/eat_time_tv"
+                android:layout_width="270pt"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/table_no_tv"
+                android:layout_marginTop="40pt"
+                android:layout_toRightOf="@+id/bill_amount_tv"
+                android:gravity="center"
+                android:textColor="@color/gray_4"
+                android:textSize="50pt"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/eat_time_title_tv"
+                android:layout_width="270pt"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/table_no_title_tv"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="40pt"
+                android:layout_toRightOf="@+id/bill_amount_title_tv"
+                android:gravity="center"
+                android:text="就餐时长"
+                android:textColor="@color/gray_0"
+                android:textSize="30pt" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="320pt"
+            android:layout_marginTop="30pt"
+            android:background="@color/white">
+
+            <Button
+                android:id="@+id/modify_people_num_btn"
+                android:layout_width="390pt"
+                android:layout_height="110pt"
+                android:layout_marginLeft="88pt"
+                android:layout_marginTop="30pt"
+                android:background="@drawable/btn_white_blue"
+                android:gravity="center"
+                android:text="修改人数"
+                android:textColor="@color/colorPrimary"
+                android:textSize="46pt"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/modify_table_btn"
+                android:layout_width="390pt"
+                android:layout_height="110pt"
+                android:layout_gravity="right"
+                android:layout_marginTop="30pt"
+                android:layout_marginRight="88pt"
+                android:background="@drawable/btn_white_orange"
+                android:gravity="center"
+                android:text="换桌"
+                android:textColor="@color/orangered"
+                android:textSize="46pt"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/add_product_btn"
+                android:layout_width="390pt"
+                android:layout_height="110pt"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="88pt"
+                android:layout_marginBottom="30pt"
+                android:background="@drawable/btn_confirm"
+                android:gravity="center"
+                android:text="继续点餐"
+                android:textColor="@color/white"
+                android:textSize="46pt"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/merge_table_btn"
+                android:layout_width="390pt"
+                android:layout_height="110pt"
+                android:layout_gravity="right|bottom"
+                android:layout_marginRight="88pt"
+                android:layout_marginBottom="30pt"
+                android:background="@drawable/btn_confirm_orange"
+                android:gravity="center"
+                android:text="合并餐桌"
+                android:textColor="@color/white"
+                android:textSize="46pt"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/product_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30pt"
+            android:background="@color/white"
+            android:paddingBottom="30pt" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/modify_table_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="720pt"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/modify_table_cancel_btn"
+                android:layout_width="210pt"
+                android:layout_height="120pt"
+                android:layout_marginLeft="30pt"
+                android:gravity="center|left"
+                android:text="取消"
+                android:textColor="@color/gray_2"
+                android:textSize="40pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="120pt"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="换桌"
+                android:textColor="@color/gray_4"
+                android:textSize="40pt"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_gravity="right"
+                android:id="@+id/modify_table_confirm_btn"
+                android:layout_width="210pt"
+                android:layout_height="120pt"
+                android:layout_marginRight="30pt"
+                android:gravity="center|right"
+                android:text="确定"
+                android:textColor="@color/colorPrimary"
+                android:textSize="40pt" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="120pt"
+                android:background="@color/white_slight" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="599pt"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/table_type_rg"
+                    android:layout_width="200pt"
+                    android:layout_height="match_parent"
+                    android:background="@color/white_slight">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/modify_table_normal_rb"
+                        android:layout_width="match_parent"
+                        android:layout_height="160px"
+                        android:background="@drawable/radio_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="大厅"
+                        android:textColor="@color/gray_4"
+                        android:textSize="40pt" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/modify_table_room_rb"
+                        android:layout_width="match_parent"
+                        android:layout_height="160px"
+                        android:background="@drawable/radio_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="包厢"
+                        android:textColor="@color/gray_4"
+                        android:textSize="40pt" />
+                </RadioGroup>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/modify_table_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+        </FrameLayout>
+    </RelativeLayout>
+</FrameLayout>
